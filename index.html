@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport para que sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketZone - Venta de Entradas</title>
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABECERA / HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🎟️ Entradas en 1 click</div>
+            <ul class="nav-links">
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN HERO (presentación) -->
+    <section class="hero">
+        <h1>Tus eventos favoritos, <span class="highlight">a un clic</span></h1>
+        <p>Compra entradas para conciertos, festivales y mucho más.</p>
+        <a href="#calculadora" class="btn-hero">Comprar entradas</a>
+    </section>
+
+    <!-- SECCIÓN EVENTOS (tarjetas) -->
+    <section id="eventos" class="eventos">
+        <h2>Eventos destacados</h2>
+        <div class="cards-container">
+
+            <!-- Tarjeta 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&q=80" alt="Concierto de rock">
+                <div class="card-info">
+                    <h3>Festival Rock 2025</h3>
+                    <p>📅 15 de Junio · Madrid</p>
+                    <p class="precio">Desde 35€</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&q=80" alt="Festival de música electrónica">
+                <div class="card-info">
+                    <h3>Electronic Night</h3>
+                    <p>📅 22 de Junio · Barcelona</p>
+                    <p class="precio">Desde 25€</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=400&q=80" alt="Concierto de pop">
+                <div class="card-info">
+                    <h3>Pop Summer Fest</h3>
+                    <p>📅 10 de Julio · Valencia</p>
+                    <p class="precio">Desde 40€</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN CALCULADORA -->
+    <section id="calculadora" class="calculadora">
+        <h2>Calculadora de entradas</h2>
+        <p class="calc-desc">Selecciona el tipo de entrada y la cantidad para ver el precio total con IVA.</p>
+
+        <div class="calc-box">
+
+            <!-- Selector de tipo de entrada -->
+            <div class="campo">
+                <label for="tipo-entrada">Tipo de entrada:</label>
+                <select id="tipo-entrada">
+                    <option value="25">General - 25€</option>
+                    <option value="40">VIP - 40€</option>
+                    <option value="15">Estudiante - 15€</option>
+                </select>
+            </div>
+
+            <!-- Input de cantidad -->
+            <div class="campo">
+                <label for="cantidad">Número de entradas:</label>
+                <input type="number" id="cantidad" min="1" max="10" placeholder="Ej: 2">
+            </div>
+
+            <!-- Botón de calcular -->
+            <button id="btn-calcular">Calcular precio</button>
+
+            <!-- Zona donde aparece el resultado -->
+            <div id="resultado" class="resultado"></div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO / FORMULARIO -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <div class="form-box">
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="tu@email.com">
+            </div>
+            <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="4" placeholder="Escribe tu consulta..."></textarea>
+            </div>
+            <button id="btn-enviar">Enviar mensaje</button>
+            <!-- Mensaje de confirmación -->
+            <p id="msg-contacto" class="msg-ok"></p>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2025 TicketZone · Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Enlace al JS externo (al final del body para mejor rendimiento) -->
+    <script src="script.js"></script>
+
+</body>
+</html>
